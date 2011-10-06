@@ -45,6 +45,7 @@ set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
 " Tabs and spaces
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 " Tabs and spaces (ruby)
 au FileType ruby setl sw=2 sts=2 et
