@@ -123,6 +123,9 @@ silent execute '!mkdir -p $HOME/.vimviews'
 " Colors and layout
 "-----------------------------------------------------------------------------
 
+" 256 color mode
+set t_Co=256
+
 " tell VIM to always put a status line in, even if there is only one window
 set laststatus=2
 
@@ -136,8 +139,8 @@ set background=dark
 set ruler
 set cursorline
 
-colorscheme jellybeans
-" colorscheme xoria256
+"colorscheme jellybeans
+colorscheme peaksea
 
 " Stuff (only if GUI running)
 if has("gui_running")
