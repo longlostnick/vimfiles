@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/Nick/.vim'
 let g:netrw_dirhist_2='/Users/Nick/Development/FBS/flexmls_api_helper'
+let g:netrw_dirhist_3='/Users/Nick/Development/Clients/Huntz/wp-content/themes'

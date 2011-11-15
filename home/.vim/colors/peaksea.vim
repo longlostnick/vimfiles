@@ -510,7 +510,7 @@ elseif &background=='dark'
     hi StatusLine	ctermfg=16	ctermbg=153	cterm=NONE
     hi LineNr		ctermfg=249	ctermbg=NONE	cterm=NONE
     hi Question		ctermfg=16	ctermbg=186	cterm=NONE
-    hi ModeMsg		ctermfg=fg	ctermbg=18	cterm=NONE
+    hi ModeMsg		ctermfg=fg	ctermbg=18	term=NONE
     hi VisualNOS	ctermfg=fg	ctermbg=18	cterm=NONE
     hi SpecialKey	ctermfg=153	ctermbg=NONE	cterm=NONE
     hi NonText		ctermfg=69	ctermbg=233	cterm=NONE
@@ -550,7 +550,7 @@ elseif &background=='dark'
           hi SpellLocal	cterm=undercurl	ctermbg=NONE	ctermfg=NONE
         endif
       endif
-      hi Pmenu		ctermfg=fg	ctermbg=90
+      hi Pmenu		ctermfg=fg	ctermbg=234
       hi PmenuSel	ctermfg=16	ctermbg=252	cterm=NONE
       hi PmenuSbar	ctermfg=fg	ctermbg=18	cterm=NONE
       hi PmenuThumb	ctermfg=fg	ctermbg=28	cterm=NONE
@@ -560,8 +560,6 @@ elseif &background=='dark'
       hi CursorColumn	ctermfg=NONE	ctermbg=88	cterm=NONE
       hi CursorLine	ctermfg=NONE	ctermbg=235	cterm=bold
       hi MatchParen	ctermfg=NONE	ctermbg=90
-      hi TabLine	cterm=underline  
-      hi TabLineFill	cterm=underline  
       hi Underlined	cterm=underline  
       hi CursorLine	cterm=bold 
     endif
