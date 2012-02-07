@@ -76,6 +76,12 @@ nmap <silent> ,m :set invhls<CR>:set hls?<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <silent> ,l :set list!<CR>
 
+" Toggle paste mode
+nmap <silent> ,p :set paste!<CR>
+
+" Toggle line numbers
+nmap <silent> ,, :set number!<CR>
+
 " NERDTree toggling
 nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
