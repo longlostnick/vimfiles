@@ -20,9 +20,6 @@ set smartcase
 set noerrorbells
 set visualbell
 
-" Don't update the display while executing macros
-set lazyredraw
-
 " Fix esc key delaying itself wtf?
 set ttimeoutlen=0
 
@@ -36,16 +33,10 @@ let loaded_matchparen = 1
 " When the page starts to scroll, keep the cursor 5 lines from the top/bottom
 set scrolloff=5
 
-" These things start comment lines
-set comments=sl:/*,mb:\ *,ex:\ */,O://,b:#,:%,:XCOMM,n:>,fb:-
-
 " Tabs and spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
-" Tabs and spaces (ruby)
-au FileType ruby setl sw=2 sts=2 et
 
 " Indentation
 set autoindent
@@ -57,30 +48,24 @@ set backspace=2
 " Let the cursor do some crazy stuff
 set virtualedit=all
 
-" Auto-completetion
-set completeopt=menuone,longest,preview
+" Tabs and spaces (ruby)
+au FileType ruby setl sw=2 sts=2 et
 
 "-----------------------------------------------------------------------------
 " Key mappings
 "-----------------------------------------------------------------------------
 
-" No more shift colon!
-nmap <space> :
-
 " jj esc!
 imap jj <esc>
+
+" No more shift colon!
+nmap <space> :
 
 " Toggle that stupid highlight search
 nmap <silent> ,m :set invhls<CR>:set hls?<CR>
 
 " Shortcut to rapidly toggle `set list`
 nmap <silent> ,l :set list!<CR>
-
-" Toggle paste mode
-nmap <silent> ,p :set paste!<CR>
-
-" Toggle line numbers
-nmap <silent> ,, :set number!<CR>
 
 " NERDTree toggling
 nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
@@ -130,7 +115,7 @@ silent execute '!mkdir -p $HOME/.vimviews'
 set laststatus=2
 
 " Set the status line the way i like it
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
+set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n
 
 syntax enable
 
@@ -142,20 +127,3 @@ set cursorline
 colorscheme xoria256
 "colorscheme jellybeans
 "colorscheme peaksea
-
-" Stuff (only if GUI running)
-if has("gui_running")
-
-	" Remove the stupid toolbar
-	set guioptions-=T
-
-	" Remove stupid scrollbars
-	set guioptions-=L
-	set guioptions-=r
-
-	" Use the same symbols as TextMate for tabstops and EOLs
-	set listchars=tab:▸\ ,eol:¬
-    
-    set guifont:Monaco:h12
-
-endif
