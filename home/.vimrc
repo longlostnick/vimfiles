@@ -34,8 +34,8 @@ let loaded_matchparen = 1
 set scrolloff=5
 
 " Tabs and spaces
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " Indentation
@@ -67,9 +67,6 @@ nmap <silent> ,m :set invhls<CR>:set hls?<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <silent> ,l :set list!<CR>
 
-" NERDTree toggling
-nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
-
 " Tab switching (mainly for terminal)
 nmap <silent> ,f :tabn<CR>
 nmap <silent> ,d :tabp<CR>
@@ -78,16 +75,15 @@ nmap <silent> ,d :tabp<CR>
 vnoremap < <gv 
 vnoremap > >gv  
 
-" Edit/Source my .vimrc
-nmap <silent> ,ev :e $MYVIMRC<CR>
-nmap <silent> ,sv :so $MYVIMRC<CR>
-
 "-----------------------------------------------------------------------------
 " Plugin stuff
 "-----------------------------------------------------------------------------
 
 " SuperTab auto-highlight first result
 let g:SuperTabLongestHighlight = 1
+
+" NERDTree toggling
+nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
 "-----------------------------------------------------------------------------
 " File stuff
@@ -106,6 +102,11 @@ set directory=$HOME/.vimswap/ 	" same for swap files
 silent execute '!mkdir -p $HOME/.vimbackup'
 silent execute '!mkdir -p $HOME/.vimswap'
 silent execute '!mkdir -p $HOME/.vimviews'
+
+" Set some common filetypes
+au BufNewFile,BufRead *.jst set filetype=html
+au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.erb set filetype=html
 
 "-----------------------------------------------------------------------------
 " Colors and layout
