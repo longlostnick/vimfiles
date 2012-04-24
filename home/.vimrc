@@ -118,6 +118,8 @@ set laststatus=2
 " Set the status line the way i like it
 set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n
 
+set t_Co=256
+
 syntax enable
 
 set number
