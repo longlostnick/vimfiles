@@ -34,9 +34,10 @@ let loaded_matchparen = 1
 set scrolloff=5
 
 " Tabs and spaces
-set tabstop=2
-set shiftwidth=2
 set expandtab
+set tabstop=4
+set shiftwidth=4
+set shiftround
 
 " Indentation
 set autoindent
@@ -49,7 +50,7 @@ set backspace=2
 set virtualedit=all
 
 " Tabs and spaces (ruby)
-au FileType ruby setl sw=2 sts=2 et
+au BufRead,BufNewFile *.rb,*.erb setl sw=2 sts=2 et
 
 "-----------------------------------------------------------------------------
 " Key mappings
@@ -106,7 +107,6 @@ silent execute '!mkdir -p $HOME/.vimviews'
 " Set some common filetypes
 au BufNewFile,BufRead *.jst set filetype=html
 au BufNewFile,BufRead *.ejs set filetype=html
-au BufNewFile,BufRead *.erb set filetype=html
 
 "-----------------------------------------------------------------------------
 " Colors and layout
