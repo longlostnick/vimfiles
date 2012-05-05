@@ -127,6 +127,6 @@ set background=dark
 set ruler
 set cursorline
 
-colorscheme xoria256
+colorscheme Tomorrow-Night
+"colorscheme xoria256
 "colorscheme jellybeans
-"colorscheme peaksea
