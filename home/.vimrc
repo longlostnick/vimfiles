@@ -105,8 +105,10 @@ silent execute '!mkdir -p $HOME/.vimswap'
 silent execute '!mkdir -p $HOME/.vimviews'
 
 " Set some common filetypes
-au BufNewFile,BufRead *.jst set filetype=html
-au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.jst   setl filetype=html
+au BufNewFile,BufRead *.ejs   setl filetype=html
+au BufNewFile,BufRead *.erb   setl filetype=eruby
+au BufNewFile,BufRead Gemfile setl filetype=Gemfile
 
 "-----------------------------------------------------------------------------
 " Colors and layout
@@ -127,6 +129,6 @@ set background=dark
 set ruler
 set cursorline
 
-colorscheme xoria256
+colorscheme Tomorrow-Night
+"colorscheme xoria256
 "colorscheme jellybeans
-"colorscheme peaksea
