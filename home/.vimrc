@@ -2,13 +2,9 @@
 " General Stuff
 "-----------------------------------------------------------------------------
 
-" no compatibility mode
 set nocp
 
-" turn off highlight search to start
 set nohls
-
-" search while we type
 set incsearch
 
 " set the search scan so that it ignores case when the search is all lower
@@ -50,7 +46,7 @@ set backspace=2
 set virtualedit=all
 
 " Tabs and spaces (ruby)
-au BufRead,BufNewFile *.rb,*.erb setl sw=2 sts=2 et
+au BufRead,BufNewFile *.rb,*.erb,*.eco setl sw=2 sts=2 et
 
 "-----------------------------------------------------------------------------
 " Key mappings
@@ -93,20 +89,11 @@ nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 " Set filetype stuff to on
 filetype plugin indent on
 
-" Setting up the directories
-set backup 						" backups are nice ...
-set backupdir=$HOME/.vimbackup/ " but not when they clog .
-set viewdir=$HOME/.vimviews/ 	" same for view files
-set directory=$HOME/.vimswap/ 	" same for swap files
-
-" Creating directories if they don't exist
-silent execute '!mkdir -p $HOME/.vimbackup'
-silent execute '!mkdir -p $HOME/.vimswap'
-silent execute '!mkdir -p $HOME/.vimviews'
-
 " Set some common filetypes
-au BufNewFile,BufRead *.jst set filetype=html
-au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead Gemfile           set ft=Gemfile
+au BufNewFile,BufRead *.coffee          set ft=coffee
+au BufNewFile,BufRead *.erb,*.eco       set ft=eruby
+au BufNewFile,BufRead *.scss,*.scss.erb set ft=scss
 
 "-----------------------------------------------------------------------------
 " Colors and layout
@@ -126,6 +113,8 @@ set number
 set background=dark
 set ruler
 set cursorline
+
+set listchars=tab:>-,trail:-,eol:$
 
 colorscheme Tomorrow-Night
 "colorscheme xoria256
