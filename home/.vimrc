@@ -95,6 +95,17 @@ au BufNewFile,BufRead *.coffee          set ft=coffee
 au BufNewFile,BufRead *.erb,*.eco       set ft=eruby
 au BufNewFile,BufRead *.scss,*.scss.erb set ft=scss
 
+" Setting up the directories
+set backup                      " backups are nice ...
+set backupdir=$HOME/.vimbackup/ " but not when they clog .
+set viewdir=$HOME/.vimviews/    " same for view files
+set directory=$HOME/.vimswap/   " same for swap files
+
+" Creating directories if they don't exist
+silent execute '!mkdir -p $HOME/.vimbackup'
+silent execute '!mkdir -p $HOME/.vimswap'
+silent execute '!mkdir -p $HOME/.vimviews'
+
 "-----------------------------------------------------------------------------
 " Colors and layout
 "-----------------------------------------------------------------------------
@@ -116,6 +127,7 @@ set cursorline
 
 set listchars=tab:>-,trail:-,eol:$
 
-colorscheme Tomorrow-Night
+colorscheme muon
+"colorscheme Tomorrow-Night
 "colorscheme xoria256
 "colorscheme jellybeans

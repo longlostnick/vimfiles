@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/Nick/.vim'
-let g:netrw_dirhist_2='/Users/Nick/Development/FBS/flexmls_api_helper'
-let g:netrw_dirhist_3='/Users/Nick/Development/Clients/Huntz/wp-content/themes'
-let g:netrw_dirhist_4='/Users/Nick/Development/FBS/grids/960'
-let g:netrw_dirhist_5='/Users/Nick/Development/Clients/Advantage/advantage_drilling/deploy'
-let g:netrw_dirhist_6='/Users/Nick/Development/Clients/Advantage/advantage_drilling/app/views'
-let g:netrw_dirhist_7='/home/nick/.homesick/repos/ifightcrime/vimfiles'
-let g:netrw_dirhist_8='/Users/Nick/Development/FBS/dummy/app/views'
-let g:netrw_dirhist_9='/Users/Nick/.homesick/repos/vimfiles/home/.vim'
+let g:netrw_dirhist_cnt =0
