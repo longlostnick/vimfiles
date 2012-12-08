@@ -72,19 +72,15 @@ if version >= 700 " Vim 7.x specific colors
     hi SpellLocal   ctermfg=198 cterm=none
 endif
 
-if version >= 703 " Vim 7.3 specific colors
-    hi ColorColumn ctermbg=235
-endif
-
 " syntax highlighting groups
 hi Comment    ctermfg=242 
-hi Constant   ctermfg=086 
-hi Identifier ctermfg=080 cterm=bold
+hi Constant   ctermfg=043
+hi Identifier ctermfg=189 cterm=bold
 hi String     ctermfg=074 
 hi Statement  ctermfg=159 cterm=none
-hi PreProc    ctermfg=122 
-hi Function   ctermfg=121 cterm=bold
-hi Type       ctermfg=117 cterm=bold
+hi PreProc    ctermfg=195
+hi Function   ctermfg=230 cterm=bold
+hi Type       ctermfg=230 cterm=bold
 hi Special    ctermfg=050 
 hi Delimiter  ctermfg=153 
 hi Number     ctermfg=086 

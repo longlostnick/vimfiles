@@ -64,13 +64,14 @@ nmap <silent> ,m :set invhls<CR>:set hls?<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <silent> ,l :set list!<CR>
 
-" Tab switching (mainly for terminal)
-nmap <silent> ,f :tabn<CR>
-nmap <silent> ,d :tabp<CR>
-
 " Keep text selected after indentation. Favorite setting of all time :D
 vnoremap < <gv 
 vnoremap > >gv  
+
+" for helping out with colors
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 "-----------------------------------------------------------------------------
 " Plugin stuff
@@ -93,7 +94,7 @@ filetype plugin indent on
 au BufNewFile,BufRead Gemfile           set ft=Gemfile
 au BufNewFile,BufRead *.coffee          set ft=coffee
 au BufNewFile,BufRead *.erb,*.eco       set ft=eruby
-au BufNewFile,BufRead *.scss,*.scss.erb set ft=scss
+au BufNewFile,BufRead *.scss*           set ft=scss
 
 " Setting up the directories
 set backup                      " backups are nice ...
@@ -128,6 +129,3 @@ set cursorline
 set listchars=tab:>-,trail:-,eol:$
 
 colorscheme muon
-"colorscheme Tomorrow-Night
-"colorscheme xoria256
-"colorscheme jellybeans
