@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 "-----------------------------------------------------------------------------
 " General Stuff
 "-----------------------------------------------------------------------------
@@ -52,6 +54,8 @@ au BufRead,BufNewFile *.rb,*.erb,*.eco setl sw=2 sts=2 et
 " Key mappings
 "-----------------------------------------------------------------------------
 
+let mapleader=","
+
 " jj esc!
 imap jj <esc>
 
@@ -59,10 +63,13 @@ imap jj <esc>
 nmap <space> :
 
 " Toggle that stupid highlight search
-nmap <silent> ,m :set invhls<CR>:set hls?<CR>
+nmap <silent> <Leader>m :set invhls<CR>:set hls?<CR>
 
 " Shortcut to rapidly toggle `set list`
-nmap <silent> ,l :set list!<CR>
+nmap <silent> <Leader>l :set list!<CR>:set list?<CR>
+
+" Paste toggling
+nmap <silent> <Leader>p :set paste!<CR>:set paste?<CR>
 
 " Keep text selected after indentation. Favorite setting of all time :D
 vnoremap < <gv 
@@ -81,7 +88,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 let g:SuperTabLongestHighlight = 1
 
 " NERDTree toggling
-nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
 "-----------------------------------------------------------------------------
 " File stuff
@@ -91,10 +98,7 @@ nmap <silent> ,nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 filetype plugin indent on
 
 " Set some common filetypes
-au BufNewFile,BufRead Gemfile           set ft=Gemfile
-au BufNewFile,BufRead *.coffee          set ft=coffee
 au BufNewFile,BufRead *.erb,*.eco       set ft=eruby
-au BufNewFile,BufRead *.scss*           set ft=scss
 
 " Setting up the directories
 set backup                      " backups are nice ...
