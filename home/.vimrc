@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 "-----------------------------------------------------------------------------
 " General Stuff
 "-----------------------------------------------------------------------------
@@ -89,6 +87,9 @@ let g:SuperTabLongestHighlight = 1
 
 " NERDTree toggling
 nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
+
+" Pathogen!
+execute pathogen#infect()
 
 "-----------------------------------------------------------------------------
 " File stuff
