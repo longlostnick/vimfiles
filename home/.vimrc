@@ -130,6 +130,7 @@ set background=dark
 set ruler
 set cursorline
 
-set listchars=tab:>-,trail:-,eol:$
+"set listchars=tab:>-,trail:-,eol:$
+set listchars=tab:▸\ ,eol:¬
 
 colorscheme muon
