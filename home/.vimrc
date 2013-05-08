@@ -66,12 +66,17 @@ nmap <silent> <Leader>m :set invhls<CR>:set hls?<CR>
 " Shortcut to rapidly toggle `set list`
 nmap <silent> <Leader>l :set list!<CR>:set list?<CR>
 
-" Paste toggling
-nmap <silent> <Leader>p :set paste!<CR>:set paste?<CR>
-
 " Keep text selected after indentation. Favorite setting of all time :D
 vnoremap < <gv 
 vnoremap > >gv  
+
+" Paste toggling
+nmap <silent> <Leader>p :set paste!<CR>:set paste?<CR>
+
+" Copy/Paste between sessions
+vmap <C-c> :w! ~/.vimbuffer<CR>
+vmap <C-p> x:-r ~/.vimbuffer<CR>
+nmap <C-p> :r ~/.vimbuffer<CR>
 
 " for helping out with colors
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

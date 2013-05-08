@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/Nick/Development/fbs/spark_api/lib/spark_api/models'
-let g:netrw_dirhist_2='/Users/Nick/Development/fbs/flexmls_assets/config/deploy'
-let g:netrw_dirhist_3='/Users/Nick/Development/fbs/spark_api_internal/lib/spark_api_internal'
-let g:netrw_dirhist_4='/Users/Nick/Development/fbs/spark_api/lib/spark_api'
-let g:netrw_dirhist_5='/Users/nick/.homesick/repos/ifightcrime/dotfiles/home'
