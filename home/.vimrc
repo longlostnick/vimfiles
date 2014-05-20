@@ -104,7 +104,8 @@ execute pathogen#infect()
 filetype plugin indent on
 
 " Set some common filetypes
-au BufNewFile,BufRead *.erb,*.eco       set ft=eruby
+au BufNewFile,BufRead *.erb set ft=eruby
+au BufNewFile,BufRead *.jst,*.eco set syntax=jst
 
 " Setting up the directories
 set backup                      " backups are nice ...
