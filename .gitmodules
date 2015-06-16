@@ -31,9 +31,9 @@
 [submodule "home/.vim/bundle/ctrlp.vim"]
 	path = home/.vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-mustache-handlebars"]
-	path = bundle/vim-mustache-handlebars
-	url = git@github.com:mustache/vim-mustache-handlebars.git
 [submodule "home/.vim/bundle/vim-mustache-handlebars"]
 	path = home/.vim/bundle/vim-mustache-handlebars
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule "home/.vim/bundle/vim-go"]
+	path = home/.vim/bundle/vim-go
+	url = git@github.com:fatih/vim-go.git
