@@ -19,6 +19,9 @@ set visualbell
 " Fix esc key delaying itself wtf?
 set ttimeoutlen=0
 
+" enable manual folding
+set foldmethod=manual
+
 "-----------------------------------------------------------------------------
 " Editor Formatting
 "-----------------------------------------------------------------------------
@@ -31,8 +34,8 @@ set scrolloff=5
 
 " Tabs and spaces
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set shiftround
 
 " Indentation
@@ -70,18 +73,10 @@ nmap <silent> <Leader>l :set list!<CR>:set list?<CR>
 vnoremap < <gv 
 vnoremap > >gv  
 
-" Paste toggling
-nmap <silent> <Leader>p :set paste!<CR>:set paste?<CR>
-
 " Copy/Paste between sessions
 vmap <C-c> :w! ~/.vimbuffer<CR>
 vmap <C-p> x:-r ~/.vimbuffer<CR>
 nmap <C-p> :r ~/.vimbuffer<CR>
-
-" for helping out with colors
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-            \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-            \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 "-----------------------------------------------------------------------------
 " Plugin stuff
