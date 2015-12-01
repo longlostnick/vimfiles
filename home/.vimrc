@@ -48,9 +48,6 @@ set backspace=2
 " Let the cursor do some crazy stuff
 set virtualedit=all
 
-" Tabs and spaces (ruby)
-au BufRead,BufNewFile *.rb,*.erb,*.eco setl sw=2 sts=2 et
-
 "-----------------------------------------------------------------------------
 " Key mappings
 "-----------------------------------------------------------------------------
@@ -65,9 +62,6 @@ nmap <space> :
 
 " Toggle that stupid highlight search
 nmap <silent> <Leader>m :set invhls<CR>:set hls?<CR>
-
-" Shortcut to rapidly toggle `set list`
-nmap <silent> <Leader>l :set list!<CR>:set list?<CR>
 
 " Keep text selected after indentation. Favorite setting of all time :D
 vnoremap < <gv 
@@ -129,7 +123,6 @@ syntax enable
 
 set number
 set background=dark
-set ruler
 set cursorline
 
 "set listchars=tab:>-,trail:-,eol:$
