@@ -22,6 +22,10 @@ set ttimeoutlen=0
 " enable manual folding
 set foldmethod=manual
 
+" 'fuzzy' find files in current dir
+set path+=**
+set wildmenu
+
 "-----------------------------------------------------------------------------
 " Editor Formatting
 "-----------------------------------------------------------------------------
@@ -118,14 +122,16 @@ set laststatus=2
 set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n
 
 set t_Co=256
+set term=screen-256color
 
 syntax enable
 
 set number
-set background=dark
+set background=light
 set cursorline
 
 "set listchars=tab:>-,trail:-,eol:$
 set listchars=tab:▸\ ,eol:¬
 
-colorscheme muon
+colorscheme lucius
+LuciusWhiteHighContrast
