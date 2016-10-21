@@ -37,3 +37,6 @@
 [submodule "home/.vim/bundle/vim-go"]
 	path = home/.vim/bundle/vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule "home/.vim/bundle/vim-colorschemes"]
+	path = home/.vim/bundle/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
