@@ -78,17 +78,15 @@ nmap <silent> <Leader>m :set invhls<CR>:set hls?<CR>
 vnoremap < <gv 
 vnoremap > >gv  
 
-" Copy/Paste between sessions
-vmap <C-c> :w! ~/.vimbuffer<CR>
-vmap <C-p> x:-r ~/.vimbuffer<CR>
-nmap <C-p> :r ~/.vimbuffer<CR>
-
 "-----------------------------------------------------------------------------
 " Plugin stuff
 "-----------------------------------------------------------------------------
 
 " SuperTab auto-highlight first result
 let g:SuperTabLongestHighlight = 1
+
+" Use grep with ctrlp
+let g:ctrlp_user_command = 'grep -rl "" --exclude-dir=tmp --exclude-dir=coverage --exclude-dir=".*" %s'
 
 " NERDTree toggling
 nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
