@@ -83,7 +83,8 @@ vnoremap > >gv
 let g:SuperTabLongestHighlight = 1
 
 " Use grep with ctrlp
-let g:ctrlp_user_command = 'grep -rl "" --exclude-dir=tmp --exclude-dir=coverage --exclude-dir=".*" %s'
+"let g:ctrlp_user_command = 'grep -rl "" --exclude-dir=tmp --exclude-dir=coverage --exclude-dir=".*" %s'
+let g:ctrlp_custom_ignore = '\v[\/](\.*|tmp|coverage)$'
 
 " NERDTree toggling
 nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
