@@ -19,9 +19,6 @@ set visualbell
 " Fix esc key delaying itself wtf?
 set ttimeoutlen=0
 
-" enable manual folding
-set foldmethod=manual
-
 " 'fuzzy' find files in current dir
 set path+=**
 set wildmenu
@@ -86,7 +83,8 @@ vnoremap > >gv
 let g:SuperTabLongestHighlight = 1
 
 " Use grep with ctrlp
-let g:ctrlp_user_command = 'grep -rl "" --exclude-dir=tmp --exclude-dir=coverage --exclude-dir=".*" %s'
+"let g:ctrlp_user_command = 'grep -rl "" --exclude-dir=tmp --exclude-dir=coverage --exclude-dir=".*" %s'
+let g:ctrlp_custom_ignore = '\v[\/](\.*|tmp|coverage)$'
 
 " NERDTree toggling
 nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
@@ -105,11 +103,14 @@ filetype plugin indent on
 au BufNewFile,BufRead *.erb set ft=eruby
 au BufNewFile,BufRead *.jst,*.eco set syntax=jst
 
+" remember last cursor position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 " Setting up the directories
-set backup                      " backups are nice ...
-set backupdir=$HOME/.vimbackup/ " but not when they clog .
-set viewdir=$HOME/.vimviews/    " same for view files
-set directory=$HOME/.vimswap/   " same for swap files
+set backup                       " backups are nice ...
+set backupdir=$HOME/.vimbackup// " but not when they clog .
+set viewdir=$HOME/.vimviews//    " same for view files
+set directory=$HOME/.vimswap//   " same for swap files
 
 " Creating directories if they don't exist
 silent execute '!mkdir -p $HOME/.vimbackup'
