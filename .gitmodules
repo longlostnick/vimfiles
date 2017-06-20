@@ -40,3 +40,6 @@
 [submodule "home/.vim/bundle/vim-colorschemes"]
 	path = home/.vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "home/.vim/bundle/rename.vim"]
+	path = home/.vim/bundle/rename.vim
+	url = git@github.com:danro/rename.vim.git
