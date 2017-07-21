@@ -37,3 +37,9 @@
 [submodule "home/.vim/bundle/ctrlp.vim"]
 	path = home/.vim/bundle/ctrlp.vim
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "home/.vim/bundle/python-syntax"]
+	path = home/.vim/bundle/python-syntax
+	url = git@github.com:hdima/python-syntax.git
+[submodule "home/.vim/bundle/vim-python-pep8-indent"]
+	path = home/.vim/bundle/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
