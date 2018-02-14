@@ -23,6 +23,9 @@ set ttimeoutlen=0
 set path+=**
 set wildmenu
 
+" don't scan all included files for autocomplete
+set complete-=i
+
 "-----------------------------------------------------------------------------
 " Editor Formatting
 "-----------------------------------------------------------------------------
@@ -35,9 +38,12 @@ set scrolloff=5
 
 " Tabs and spaces
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set shiftround
+
+" Override to 2 spaces for typescript
+au FileType typescript setl sw=2 ts=2 et
 
 " Indentation
 set autoindent
@@ -79,18 +85,32 @@ vnoremap > >gv
 " Plugin stuff
 "-----------------------------------------------------------------------------
 
+" Pathogen!
+execute pathogen#infect()
+execute pathogen#helptags()
+
 " SuperTab auto-highlight first result
 let g:SuperTabLongestHighlight = 1
 
-" Use grep with ctrlp
-"let g:ctrlp_user_command = 'grep -rl "" --exclude-dir=tmp --exclude-dir=coverage --exclude-dir=".*" %s'
-let g:ctrlp_custom_ignore = '\v[\/](\.*|tmp|coverage)$'
+" ctrlp and cpsm matching
+let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
+let g:ctrlp_custom_ignore = '\v[\/](\.*|tmp|coverage|.)$'
+let g:ctrlp_max_files = 500000
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.*|tmp|coverage)$',
+  \ 'file': '\v\.(png|jpg|gif)$'
+  \ }
 
 " NERDTree toggling
 nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
-" Pathogen!
-execute pathogen#infect()
+" Tagbar toggling
+nmap <silent> <Leader>tb :TagbarToggle<CR>
+
+let g:syntastic_python_flake8_args='--ignore=F401'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
 
 "-----------------------------------------------------------------------------
 " File stuff
