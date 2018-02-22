@@ -92,6 +92,9 @@ execute pathogen#helptags()
 " SuperTab auto-highlight first result
 let g:SuperTabLongestHighlight = 1
 
+" Make SuperTab case sensitive
+let g:SuperTabCompleteCase = 'match'
+
 " ctrlp and cpsm matching
 let g:ctrlp_match_func = {'match': 'cpsm#CtrlPMatch'}
 let g:ctrlp_custom_ignore = '\v[\/](\.*|tmp|coverage|.)$'
@@ -102,15 +105,41 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(png|jpg|gif)$'
   \ }
 
+" Sort by file location instead of alphabetical
+let g:tagbar_sort = 0
+let g:tagbar_type_typescript = {
+  \ 'ctagstype': 'typescript',
+  \ 'kinds': [
+    \ 'c:classes',
+    \ 'n:modules',
+    \ 'f:functions',
+    \ 'v:variables',
+    \ 'v:varlambdas',
+    \ 'm:members',
+    \ 'i:interfaces',
+    \ 'e:enums',
+  \ ]
+  \ }
+
+" Syntastic settings
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_python_flake8_args='--ignore=F401'
+let g:syntastic_python_pylint_args='--disable=fixme'
+
+"let g:syntastic_typescript_checkers = ['tslint']
+"let g:syntastic_typescript_tslint_args='-t json -c dropbox/linters/tslint/tslint.json'
+"let g:tsuquyomi_disable_quickfix = 1
+
 " NERDTree toggling
 nmap <silent> <Leader>nt :NERDTreeToggle \| :silent NERDTreeMirror<CR>
 
 " Tagbar toggling
 nmap <silent> <Leader>tb :TagbarToggle<CR>
 
-let g:syntastic_python_flake8_args='--ignore=F401'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" Reset Syntastic and hide error panel
+nmap <silent> <Leader>sr :SyntasticReset<CR>
 
 "-----------------------------------------------------------------------------
 " File stuff
